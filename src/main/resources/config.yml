@@ -1,0 +1,58 @@
+# RTPGUI Configuration
+# Supports both legacy color codes (&a, &b, etc.) and hex colors (&#FFFFFF)
+
+gui:
+  # GUI size (must be multiple of 9, max 54)
+  size: 27
+  # GUI title - supports hex colors like &#00FF00
+  title: "&#00AAFF&lRTP Menu"
+
+# Item configurations
+items:
+  overworld:
+    # Item slot in GUI (0-26 for size 27)
+    slot: 11
+    # Material type (see https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
+    material: "GRASS_BLOCK"
+    # Display name - supports hex colors
+    display-name: "&#00FF00&lOverworld RTP"
+    # Item lore (description)
+    lore:
+      - "&7Click to teleport to a"
+      - "&7random location in the"
+      - "&#00FF00&lOverworld"
+
+  nether:
+    slot: 13
+    material: "NETHERRACK"
+    display-name: "&#FF0000&lNether RTP"
+    lore:
+      - "&7Click to teleport to a"
+      - "&7random location in the"
+      - "&#FF0000&lNether"
+
+  end:
+    slot: 15
+    material: "END_STONE"
+    display-name: "&#FFFF00&lEnd RTP"
+    lore:
+      - "&7Click to teleport to a"
+      - "&7random location in the"
+      - "&#FFFF00&lEnd"
+
+# Commands executed when items are clicked
+# %player% will be replaced with the player's name
+commands:
+  overworld: "betterrtp player %player% world"
+  nether: "betterrtp player %player% world_nether"
+  end: "betterrtp player %player% world_the_end"
+
+# Sound configuration
+sound:
+  # Sound to play when clicking an item
+  # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+  click: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  # Volume (0.0 to 1.0)
+  volume: 1.0
+  # Pitch (0.5 to 2.0)
+  pitch: 1.0

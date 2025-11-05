@@ -1,0 +1,20 @@
+name: RTPGUI
+version: '1.0-SNAPSHOT'
+main: dev.tserato.coupsquad.RTPGUI
+api-version: '1.21'
+description: A GUI plugin for random teleportation with hex color support
+author: tserato
+
+commands:
+  rtp:
+    description: Opens the RTP GUI
+    usage: /rtp
+    aliases: [randomtp, randomteleport]
+
+permissions:
+  rtpgui.use:
+    description: Allows using the /rtp command
+    default: true
+  rtpgui.reload:
+    description: Allows reloading the plugin configuration with /rtpgui reload
+    default: op
